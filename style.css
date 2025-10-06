@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: radial-gradient(circle at center, #000010, #000);
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  perspective: 1000px; /* para sensación 3D */
+  position: relative;
+}
+
+/* Frases flotantes */
+.frase {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  text-align: center;
+  width: 80%;
+  color: #fff;
+  text-shadow: 0 0 20px #b58cff;
+  animation: float 4s ease-in-out infinite alternate;
+  z-index: 2;
+}
+
+@keyframes float {
+  0% { transform: translate(-50%, -48%); }
+  100% { transform: translate(-50%, -52%); }
+}
+
+/* Estrellas 3D */
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  z-index: 1;
+  box-shadow: 0 0 5px white;
+}
